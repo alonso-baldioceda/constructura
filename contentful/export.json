@@ -1,0 +1,2655 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "portfolio",
+        "type": "ContentType",
+        "createdAt": "2021-02-03T17:17:49.998Z",
+        "updatedAt": "2021-06-13T21:35:02.229Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2021-06-13T21:35:02.229Z",
+        "firstPublishedAt": "2021-02-03T17:17:53.620Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Portfolio",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "summary",
+          "name": "Summary",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "max": 80
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "thumbnail",
+          "name": "Thumbnail",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": ["image"]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "gallery",
+          "name": "Gallery",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkMimetypeGroup": ["image"]
+              },
+              {
+                "assetImageDimensions": {
+                  "width": {
+                    "min": 900,
+                    "max": null
+                  },
+                  "height": {
+                    "min": 600,
+                    "max": null
+                  }
+                }
+              }
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "related",
+          "name": "Related projects",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "min": 0,
+                "max": 3
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": ["portfolio"]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "category",
+          "name": "Category",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": ["Residencial", "Industrial", "Comercial", "Otros"]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "tags": [],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "2r46c1m4m3q2",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 20,
+        "createdAt": "2021-02-03T17:17:53.795Z",
+        "createdBy": {
+          "sys": {
+            "id": "0aiTo5ZlKU7HChRvtjKQgH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-06-13T21:35:02.764Z",
+        "updatedBy": {
+          "sys": {
+            "id": "0aiTo5ZlKU7HChRvtjKQgH",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "portfolio",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "summary",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "thumbnail",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "gallery",
+          "widgetId": "assetGalleryEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "related",
+          "settings": {
+            "bulkEditing": false
+          },
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "category",
+          "widgetId": "listInput",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "6ybuKsRJxC4IGL1FwuAzen",
+        "type": "Entry",
+        "createdAt": "2021-02-03T17:18:02.650Z",
+        "updatedAt": "2021-06-22T16:38:16.401Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 33,
+        "publishedAt": "2021-06-22T16:38:16.401Z",
+        "firstPublishedAt": "2021-02-03T17:18:07.141Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6wQjDXplBmRVGSc6AKvfmy"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 34,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6wQjDXplBmRVGSc6AKvfmy"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "portfolio"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Liceo de Atenas"
+        },
+        "summary": {
+          "en-US": "Atenas, Costa Rica."
+        },
+        "slug": {
+          "en-US": "liceo-atenas"
+        },
+        "thumbnail": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2rXXfCq7OmHHL4rXDp4uMl"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Anteproyecto diseñado por el Arquitecto Marvin Rodríguez, brinda espacio, órden, luz natural y un ambiente apropiado y seguro para los estudiantes."
+        },
+        "gallery": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2rXXfCq7OmHHL4rXDp4uMl"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2hf317UJY21LgAalyf7kgf"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "YsoKW4AhvPFCKvux2GnzK"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4H6SKk92PTJB1mXFl55qBa"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6KI41MuSE4OtTF5d3P5zUp"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7sN3gGtsdkq6KhWRNx3qp2"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4fQXQ2XJVhfROD3OPomAGA"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1uzUzz8sP8ocEsT113NZ1C"
+              }
+            }
+          ]
+        },
+        "related": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6wJlM7wIdJ6rg55tWt8x2c"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "cGMSGyWttmfv1RVTaITE3"
+              }
+            }
+          ]
+        },
+        "category": {
+          "en-US": ["Otros"]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "6wJlM7wIdJ6rg55tWt8x2c",
+        "type": "Entry",
+        "createdAt": "2021-02-03T17:18:02.657Z",
+        "updatedAt": "2021-06-13T21:47:23.469Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 50,
+        "publishedAt": "2021-06-13T21:47:23.469Z",
+        "firstPublishedAt": "2021-02-03T17:18:07.607Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 51,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "portfolio"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Casa Zúñiga Valverde"
+        },
+        "summary": {
+          "en-US": "Barva de Heredia, Costa Rica."
+        },
+        "slug": {
+          "en-US": "casa-zuniga-valverde"
+        },
+        "thumbnail": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4Iqv52VORq3RHI1JUb6KxQ"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Acogedora casa de habitación con diseño minimalista-contemporáneo, abundante iluminación natural, espacios abiertos, amplios jardines, paisajismo y decoración de interiores acorde a las necesidades de los propietarios, 3 dormitorios, 3 baños, lavandería sala comedor cocina, todo en  un área habitable de 140m2."
+        },
+        "gallery": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4PwvtBmFDzNSlYyGOuJCBg"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4Iqv52VORq3RHI1JUb6KxQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7M3kvY8CZ2IJOvAQnqAvRo"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1s5OEoMgL78sGryq1yPahR"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "15iZSUyf7OMF7bCpzeKSgm"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "QV5FqKqgUFCr10CpSwIZU"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4hnFE7Y4kyby9FoJAuUcUx"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2xtWBuZRqVVOWnDetT1gE0"
+              }
+            }
+          ]
+        },
+        "related": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6ybuKsRJxC4IGL1FwuAzen"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "cGMSGyWttmfv1RVTaITE3"
+              }
+            }
+          ]
+        },
+        "category": {
+          "en-US": ["Residencial"]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "cGMSGyWttmfv1RVTaITE3",
+        "type": "Entry",
+        "createdAt": "2021-02-03T17:18:02.669Z",
+        "updatedAt": "2021-06-13T21:47:37.671Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 37,
+        "publishedAt": "2021-06-13T21:47:37.671Z",
+        "firstPublishedAt": "2021-02-03T17:18:06.591Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 38,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "portfolio"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Condominio Rio Del Mar"
+        },
+        "summary": {
+          "en-US": "Parrita, Costa Rica"
+        },
+        "slug": {
+          "en-US": "condominio-rio-del-mar"
+        },
+        "thumbnail": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2pzRh27gIiOAHXkonEritC"
+            }
+          }
+        },
+        "description": {
+          "en-US": "Anteproyecto diseñado por GADIR DESIGN, Ubicado en Parrita, Puntarenas, Costa Rica, ofrece calidez cercanía con la naturaleza y un ambiente relajante en este proyecto habitacional."
+        },
+        "gallery": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2pzRh27gIiOAHXkonEritC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7lDS5OCqQiJI6JWQwfooTy"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4lKGKJvSGlydHHWWN0Sqoy"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1PGGarO2fH8AQXBVzKUbGm"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "nSxogeq9VXrcKdQl2sfpe"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5XytuFdOqiUhz7NYIMP4nQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3QH9FPMcVjQVl7wV6zDuQl"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5nhimAU8yoxMj4BnkcpIE3"
+              }
+            }
+          ]
+        },
+        "related": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6wJlM7wIdJ6rg55tWt8x2c"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6ybuKsRJxC4IGL1FwuAzen"
+              }
+            }
+          ]
+        },
+        "category": {
+          "en-US": ["Residencial"]
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "2hf317UJY21LgAalyf7kgf",
+        "type": "Asset",
+        "createdAt": "2021-02-03T17:17:55.001Z",
+        "updatedAt": "2021-06-13T04:00:17.001Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2021-06-13T04:00:17.001Z",
+        "firstPublishedAt": "2021-02-03T17:18:02.235Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Liceo de Atenas"
+        },
+        "description": {
+          "en-US": "Área administrativa"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/2hf317UJY21LgAalyf7kgf/a34cae4f6b1cc931d79e2e0e2f34a157/LA2.jpg",
+            "details": {
+              "size": 297525,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "LA2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "YsoKW4AhvPFCKvux2GnzK",
+        "type": "Asset",
+        "createdAt": "2021-02-03T17:17:55.030Z",
+        "updatedAt": "2021-06-13T04:00:17.342Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2021-06-13T04:00:17.342Z",
+        "firstPublishedAt": "2021-02-03T17:18:01.907Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Liceo de Atenas"
+        },
+        "description": {
+          "en-US": "Vista aérea"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/YsoKW4AhvPFCKvux2GnzK/ea3f6fa8b61398d14f0bc51be5836f2b/LA3.jpg",
+            "details": {
+              "size": 354287,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "LA3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "2pzRh27gIiOAHXkonEritC",
+        "type": "Asset",
+        "createdAt": "2021-02-03T17:17:55.073Z",
+        "updatedAt": "2021-06-13T04:00:17.724Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 22,
+        "publishedAt": "2021-06-13T04:00:17.724Z",
+        "firstPublishedAt": "2021-02-03T17:18:00.773Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 23,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Condominio Río Del Mar"
+        },
+        "description": {
+          "en-US": "Fachada frontal de apartamentos"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/2pzRh27gIiOAHXkonEritC/8144de60144df7f09ad512f5927886de/RDM1.jpg",
+            "details": {
+              "size": 499178,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "RDM1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "4Iqv52VORq3RHI1JUb6KxQ",
+        "type": "Asset",
+        "createdAt": "2021-02-03T17:17:55.079Z",
+        "updatedAt": "2021-06-13T04:00:18.109Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2021-06-13T04:00:18.109Z",
+        "firstPublishedAt": "2021-02-03T17:18:01.134Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Casa Zúñiga"
+        },
+        "description": {
+          "en-US": "Comedor"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/4Iqv52VORq3RHI1JUb6KxQ/031d144d6a4530174f9f6d4a30d0c5ea/CASA_ZU__N__IGA_2.jpg",
+            "details": {
+              "size": 298274,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "CASA_ZU__N__IGA_2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "4PwvtBmFDzNSlYyGOuJCBg",
+        "type": "Asset",
+        "createdAt": "2021-02-03T17:17:55.085Z",
+        "updatedAt": "2021-06-13T04:00:18.471Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2021-06-13T04:00:18.471Z",
+        "firstPublishedAt": "2021-02-03T17:18:01.566Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Casa Zúñiga Valverde"
+        },
+        "description": {
+          "en-US": "Perspectiva exterior"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/4PwvtBmFDzNSlYyGOuJCBg/630ae3b6bd47069647e15c38dad278a2/CASA_ZU__N__IGA_1.jpg",
+            "details": {
+              "size": 467284,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "CASA_ZU__N__IGA_1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "7lDS5OCqQiJI6JWQwfooTy",
+        "type": "Asset",
+        "createdAt": "2021-02-03T17:17:55.445Z",
+        "updatedAt": "2021-06-13T04:00:18.825Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 18,
+        "publishedAt": "2021-06-13T04:00:18.825Z",
+        "firstPublishedAt": "2021-02-03T17:18:00.367Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 19,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Condominio Río Del Mar"
+        },
+        "description": {
+          "en-US": "Entrada "
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/7lDS5OCqQiJI6JWQwfooTy/5cc30d4e90f4b3f1a20a928a605f1cbe/RDM2.jpg",
+            "details": {
+              "size": 594360,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "RDM2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "2rXXfCq7OmHHL4rXDp4uMl",
+        "type": "Asset",
+        "createdAt": "2021-02-03T17:17:56.986Z",
+        "updatedAt": "2021-06-13T04:00:19.198Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2021-06-13T04:00:19.198Z",
+        "firstPublishedAt": "2021-02-03T17:18:00.025Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Liceo de Atenas Costa Rica"
+        },
+        "description": {
+          "en-US": "Perspectiva frontal"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/2rXXfCq7OmHHL4rXDp4uMl/bec23aa86cef9b7babb8942d04dfe100/LA1.jpg",
+            "details": {
+              "size": 275366,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "LA1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "4lKGKJvSGlydHHWWN0Sqoy",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:06:36.784Z",
+        "updatedAt": "2021-06-13T04:00:19.607Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2021-06-13T04:00:19.607Z",
+        "firstPublishedAt": "2021-02-15T14:06:55.401Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Condominio Río Del Mar"
+        },
+        "description": {
+          "en-US": "Gimnasio"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/4lKGKJvSGlydHHWWN0Sqoy/57738ebc7bd9770ec2d6c2c3774d04f3/RDM3.jpg",
+            "details": {
+              "size": 553912,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "RDM3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "1PGGarO2fH8AQXBVzKUbGm",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:08:11.969Z",
+        "updatedAt": "2021-06-13T04:00:19.936Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2021-06-13T04:00:19.936Z",
+        "firstPublishedAt": "2021-02-15T14:08:35.636Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Condominio Río Del Mar"
+        },
+        "description": {
+          "en-US": "Vista Piscina"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/1PGGarO2fH8AQXBVzKUbGm/c56bb543dc2c804e2c48bb0704fbf9fe/RDM4.jpg",
+            "details": {
+              "size": 648774,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "RDM4.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "nSxogeq9VXrcKdQl2sfpe",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:08:43.696Z",
+        "updatedAt": "2021-06-13T04:00:20.270Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2021-06-13T04:00:20.270Z",
+        "firstPublishedAt": "2021-02-15T14:09:05.089Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Condominio Río Del Mar"
+        },
+        "description": {
+          "en-US": "Vista gimnasio y apartamentos"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/nSxogeq9VXrcKdQl2sfpe/a8c30200b864fddfb970a5d4eedd9a5a/RDM5.jpg",
+            "details": {
+              "size": 597594,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "RDM5.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "3QH9FPMcVjQVl7wV6zDuQl",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:09:15.495Z",
+        "updatedAt": "2021-06-13T04:00:20.646Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-13T04:00:20.646Z",
+        "firstPublishedAt": "2021-02-15T14:09:37.134Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Condominio Río Del Mar"
+        },
+        "description": {
+          "en-US": "Vista piscina 2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/3QH9FPMcVjQVl7wV6zDuQl/58d4b3c1f6071e78157a0589955f9b38/RDM7.jpg",
+            "details": {
+              "size": 627746,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "RDM7.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "5XytuFdOqiUhz7NYIMP4nQ",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:10:10.586Z",
+        "updatedAt": "2021-06-13T04:00:21.016Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2021-06-13T04:00:21.016Z",
+        "firstPublishedAt": "2021-02-15T14:10:29.916Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Condominio Río Del Mar"
+        },
+        "description": {
+          "en-US": "Perspectiva apartamentos 2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/5XytuFdOqiUhz7NYIMP4nQ/b39a27cf676709b84351b35544a4b5ae/RDM6.jpg",
+            "details": {
+              "size": 408850,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "RDM6.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "5nhimAU8yoxMj4BnkcpIE3",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:10:47.391Z",
+        "updatedAt": "2021-06-13T04:00:21.473Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-13T04:00:21.473Z",
+        "firstPublishedAt": "2021-02-15T14:12:20.956Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Condominio Río Del Mar"
+        },
+        "description": {
+          "en-US": "Vista aérea 2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/5nhimAU8yoxMj4BnkcpIE3/685d364ab7a4b359b2129a44ce14af10/RDM8.jpg",
+            "details": {
+              "size": 610475,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "RDM8.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "7M3kvY8CZ2IJOvAQnqAvRo",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:16:57.267Z",
+        "updatedAt": "2021-06-13T04:00:22.173Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 20,
+        "publishedAt": "2021-06-13T04:00:22.173Z",
+        "firstPublishedAt": "2021-02-15T14:18:28.817Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 21,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Casa Zúñiga Valverde"
+        },
+        "description": {
+          "en-US": "Sala de estar "
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/7M3kvY8CZ2IJOvAQnqAvRo/e262e01c9d7b38bd73c07886b0b170e0/CASA_ZU__N__IGA_3.jpg",
+            "details": {
+              "size": 379394,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "CASA_ZU__N__IGA_3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "1s5OEoMgL78sGryq1yPahR",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:18:34.478Z",
+        "updatedAt": "2021-06-13T04:00:22.603Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-13T04:00:22.603Z",
+        "firstPublishedAt": "2021-02-15T14:18:54.011Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Casa Zúñiga"
+        },
+        "description": {
+          "en-US": "Cocina"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/1s5OEoMgL78sGryq1yPahR/66d3d29e974039457f17231c1a395450/CASA_ZU__N__IGA_4.jpg",
+            "details": {
+              "size": 316643,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "CASA_ZU__N__IGA_4.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "15iZSUyf7OMF7bCpzeKSgm",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:19:00.234Z",
+        "updatedAt": "2021-06-13T04:00:22.995Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2021-06-13T04:00:22.995Z",
+        "firstPublishedAt": "2021-02-15T14:19:18.866Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Casa Zúñiga"
+        },
+        "description": {
+          "en-US": "Dormitorio de niña"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/15iZSUyf7OMF7bCpzeKSgm/d33af90f908006b4483accc8c96dbd22/CASA_ZU__N__IGA_5.jpg",
+            "details": {
+              "size": 352948,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "CASA_ZU__N__IGA_5.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "QV5FqKqgUFCr10CpSwIZU",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:19:24.083Z",
+        "updatedAt": "2021-06-13T04:00:23.430Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-13T04:00:23.430Z",
+        "firstPublishedAt": "2021-02-15T14:20:57.937Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Casa Zúñiga"
+        },
+        "description": {
+          "en-US": "Oficina"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/QV5FqKqgUFCr10CpSwIZU/e2929fa25e4f98f7e3fee97d585b47b1/CASA_ZU__N__IGA_6.jpg",
+            "details": {
+              "size": 248045,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "CASA_ZU__N__IGA_6.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "4hnFE7Y4kyby9FoJAuUcUx",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:21:04.498Z",
+        "updatedAt": "2021-06-13T04:00:23.850Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-13T04:00:23.850Z",
+        "firstPublishedAt": "2021-02-15T14:21:33.679Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Casa Zúñiga"
+        },
+        "description": {
+          "en-US": "Baño Principal"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/4hnFE7Y4kyby9FoJAuUcUx/da4eab5c1d921a3d2b7d9f66f592a6db/CASA_ZU__N__IGA_7.jpg",
+            "details": {
+              "size": 355602,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "CASA_ZU__N__IGA_7.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "2xtWBuZRqVVOWnDetT1gE0",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:21:41.199Z",
+        "updatedAt": "2021-06-13T04:00:24.230Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-13T04:00:24.230Z",
+        "firstPublishedAt": "2021-02-15T14:22:10.135Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Casa Zúñiga"
+        },
+        "description": {
+          "en-US": "Dormitorio Principal"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/2xtWBuZRqVVOWnDetT1gE0/7389c64782910b6df15a2b0a2c1962eb/CASA_ZU__N__IGA_8.jpg",
+            "details": {
+              "size": 318103,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "CASA_ZU__N__IGA_8.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "4H6SKk92PTJB1mXFl55qBa",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:25:40.604Z",
+        "updatedAt": "2021-06-13T04:00:24.584Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2021-06-13T04:00:24.584Z",
+        "firstPublishedAt": "2021-02-15T14:26:03.303Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Liceo de Atenas"
+        },
+        "description": {
+          "en-US": "Rampa para personas con discapacidad"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/4H6SKk92PTJB1mXFl55qBa/8be3dfbd60207b503b7e592b5ef76df1/LA4.jpg",
+            "details": {
+              "size": 683220,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "LA4.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "6KI41MuSE4OtTF5d3P5zUp",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:26:09.866Z",
+        "updatedAt": "2021-06-13T04:00:24.983Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-13T04:00:24.983Z",
+        "firstPublishedAt": "2021-02-15T14:26:35.387Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Liceo de Atenas"
+        },
+        "description": {
+          "en-US": "Patio interno Biblioteca"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/6KI41MuSE4OtTF5d3P5zUp/552cfc797a9ef687488a014c352319d5/LA5.jpg",
+            "details": {
+              "size": 496110,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "LA5.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "7sN3gGtsdkq6KhWRNx3qp2",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:27:02.493Z",
+        "updatedAt": "2021-06-13T04:00:25.378Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2021-06-13T04:00:25.378Z",
+        "firstPublishedAt": "2021-02-15T14:27:23.033Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Liceo de Atenas"
+        },
+        "description": {
+          "en-US": "Vista interior Aula"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/7sN3gGtsdkq6KhWRNx3qp2/2833ec71499f30fd2548d2ff9b1c84d5/LA6.jpg",
+            "details": {
+              "size": 347886,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "LA6.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "4fQXQ2XJVhfROD3OPomAGA",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:27:34.291Z",
+        "updatedAt": "2021-06-13T04:00:25.763Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 16,
+        "publishedAt": "2021-06-13T04:00:25.763Z",
+        "firstPublishedAt": "2021-02-15T14:27:54.302Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 17,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Liceo de Atenas"
+        },
+        "description": {
+          "en-US": "Vista pasos cubiertos"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/4fQXQ2XJVhfROD3OPomAGA/aacf2d840e0a974a45a312149f1fe78c/LA7.jpg",
+            "details": {
+              "size": 423450,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "LA7.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": []
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "id": "1uzUzz8sP8ocEsT113NZ1C",
+        "type": "Asset",
+        "createdAt": "2021-02-15T14:28:00.893Z",
+        "updatedAt": "2021-06-13T04:00:26.108Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2021-06-13T04:00:26.108Z",
+        "firstPublishedAt": "2021-02-15T14:28:28.136Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Liceo de Atenas"
+        },
+        "description": {
+          "en-US": "Vista Biblioteca"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/2r46c1m4m3q2/1uzUzz8sP8ocEsT113NZ1C/20c27f7e5248307e4347173a111b65a0/LA8.jpg",
+            "details": {
+              "size": 412023,
+              "image": {
+                "width": 1440,
+                "height": 1080
+              }
+            },
+            "fileName": "LA8.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "1PC8lI38RwHdXEYmrx9hOu",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "9886ac58-749c-42f7-be01-3501d0553200"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "createdAt": "2021-02-03T17:14:45Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedAt": "2021-02-03T17:14:45Z"
+      }
+    }
+  ],
+  "webhooks": [],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": ["read"],
+        "Settings": [],
+        "ContentDelivery": [],
+        "Environments": [],
+        "EnvironmentAliases": [],
+        "Tags": []
+      },
+      "sys": {
+        "type": "Role",
+        "id": "1PD7RMElUbsNZKXPLFhweq",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "2r46c1m4m3q2"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "createdAt": "2021-02-03T17:14:45Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "0aiTo5ZlKU7HChRvtjKQgH"
+          }
+        },
+        "updatedAt": "2021-02-03T17:14:45Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "hero": {
+      "title": "Frase corta que\nindica que hacemos",
+      "description": [
+        {
+          "text": "Nuestro objetivo principal es la satisfacción de nuestros clientes brindando servicios de alta calidad, precisión e imaginación en diseño, modelado en tres dimensiones y renderizado de sus proyectos arquitectónicos de distintas clases, tamaños y alcances…."
+        },
+        {
+          "text": "Con nuestra ayuda puedes alcanzar tus metas deseadas, mediante la correcta aplicación del diseño en obras de diferentes tipos de complejidad."
+        },
+        {
+          "text": "Contamos con el conocimiento y la experiencia para que tu proyecto sea un éxito, minimizando riesgos innecesarios, e incrementando la exposición de tu proyecto con contenido gráfico de alta calidad."
+        }
+      ]
+    },
+    "slidesData": [
+      {
+        "title": "Construye ese lugar que imaginaste",
+        "description": "Planea hasta el más pequeño detalle de tu casa o negocio ideal, y hazlo realidad",
+        "alt": "Apartamento de Playa con Rancho, Piscina y Jardines Exteriores"
+      },
+      {
+        "title": "Los espacios cambian",
+        "description": "Explora con nosotros las posibilidades de rediseñar tu espacio y sacarle todo el provecho posible. Observa y analiza tu proyecto en 3D con nosotros para que juntos resolvamos hasta el más mínimo detalle antes de construirlo.",
+        "alt": "Oficina en el segundo nivel con abundante luz y ventilación natural"
+      }
+    ],
+    "services": {
+      "headline": "La conquista del espacio comienza con una idea y un sueño",
+      "description": "Enséñanos tus ideas, y permite que nos encarguemos del resto, presentándote de una forma fácil de visualizar esa idea que estaba en tu mente y juntos la haremos realidad.",
+      "list": [
+        {
+          "title": "Anteproyectos arquitectónicos",
+          "list": [
+            {
+              "title": "Modelado arquitectónico en 3 dimensiones."
+            },
+            {
+              "title": "Visualización realista de tus proyectos."
+            },
+            {
+              "title": "Modelos 3D constructivos para presupuesto, administración y planificación de obras."
+            },
+            {
+              "title": "Planos de taller para producción y manufactura."
+            },
+            {
+              "title": "Diseño de mobiliario."
+            },
+            {
+              "title": "Animaciones digitales, recorre tu proyecto de forma virtual antes de construirlo."
+            }
+          ]
+        },
+        {
+          "title": "Planos y tramitación de proyectos",
+          "list": [
+            {
+              "title": "Confección de planos constructivos."
+            },
+            {
+              "title": "Presupuestos globales y detallados."
+            },
+            {
+              "title": "Permisos de construcción."
+            },
+            {
+              "title": "Dirección técnica de obras."
+            }
+          ]
+        },
+        {
+          "title": "Servicios de Valuación",
+          "list": [
+            {
+              "title": "Avalúos terrenos y edificaciones."
+            }
+          ]
+        },
+        {
+          "title": "Servicios de dibujo",
+          "list": [
+            {
+              "title": "Dibujo 2D de planos constructivos para tramitar y obtener permisos de construcción."
+            }
+          ]
+        }
+      ]
+    },
+
+    "contact": {
+      "cardsData": [
+        {
+          "title": "Phone",
+          "iconUrl": "phone.svg",
+          "list": [
+            {
+              "text": "(506) 6043-0841"
+            }
+          ]
+        },
+        {
+          "title": "Email",
+          "iconUrl": "envelope.svg",
+          "list": [
+            {
+              "text": "estudioqbocr@gmail.com"
+            }
+          ]
+        }
+      ],
+      "form": {
+        "heading": "Contáctenos",
+        "body": "Te responderemos lo más pronto posible.",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "subject": "Asunto",
+        "message": "Mensaje",
+        "submitting": "Enviando",
+        "submit": "Enviar",
+        "validation": {
+          "firstNameRequired": "Nombre requerido",
+          "lastNameRequired": "Apellido requerido",
+          "emailRequired": "Correo requerido",
+          "emailInvalid": "Correo inválido",
+          "phoneRequired": "Teléfono requerido",
+          "subjectRequired": "Asunto requerido",
+          "messageRequired": "Mensaje requerido",
+          "successHeader": "Mensaje enviado :)",
+          "successBody": "De ser necesario lo contactaremos, gracias!",
+          "errorHeader": "Algo pasó :(",
+          "errorBody": "Por favor inténtelo de nuevo, gracias!"
+        }
+      }
+    }
+  }
+]

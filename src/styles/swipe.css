@@ -1,0 +1,55 @@
+.control-button {
+  --swiper-theme-bullet: theme("colors.green.400");
+  --swiper-theme-color: theme("colors.gray.50");
+  --swiper-navigation-color: theme("colors.yellow.400");
+  --swiper-navigation-color-disabled: theme("colors.gray.600");
+  --swiper-navigation-background-disabled: theme("colors.gray.400");
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  border-radius: 0%;
+  color: theme("colors.gray.50");
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 48px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: theme("colors.black");
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 28px;
+  height: 30px;
+  text-align: center;
+  width: 18px;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  background: var(--swiper-navigation-background-disabled);
+  color: var(--swiper-navigation-color-disabled);
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #10b981;
+}
