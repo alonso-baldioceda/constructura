@@ -8,7 +8,7 @@ module.exports = {
       padding: "1.25rem",
     },
     fontFamily: {
-      sans: ["Montserrat", "system-ui", "sans-serif"],
+      sans: ["Merriweather Sans", "Montserrat", "system-ui", "sans-serif"],
       serif: ["Libre Baskerville", "system-ui", "serif"],
     },
     colors: {
@@ -26,6 +26,7 @@ module.exports = {
       fire: "#F70504",
       azure: "#0482ED",
       martinique: "#2A2A4F",
+      deepBlue: "#072b63",
     },
   },
   variants: {

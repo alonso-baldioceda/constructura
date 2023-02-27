@@ -13,7 +13,7 @@ const ReachUs = ({ data }) => {
           })}
         >
           <div className="flex flex-row items-center justify-left">
-            <div className="flex items-center w-14 h-14 justify-center rounded-full bg-green-300 mr-4">
+            <div className="flex items-center w-14 h-14 justify-center rounded-full bg-yellow-500 mr-4">
               <img
                 src={`/${card.iconUrl}`}
                 className="w-5 h-5"

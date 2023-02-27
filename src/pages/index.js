@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SiteMetadata title="Home" description="Portfolio of Estudio Qbo" />
+      <SiteMetadata title="Home" description="Portfolio of Coesa" />
       <div className="pt-8 lg:pt-12">
         <div className="container">
           <div className="mx-auto max-w-xl lg:max-w-full">

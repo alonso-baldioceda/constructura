@@ -2,6 +2,7 @@ import React from "react"
 
 import FadeInWhenVisible from "./../components/FadeInWhenVisible"
 
+import IconHammer from "./../images/svg/hammer.svg"
 import IconPlan from "./../images/svg/plan.svg"
 import IconListItem from "./../images/svg/boxArrow.svg"
 
@@ -12,9 +13,13 @@ const Services = ({ services }) => {
         <div key={`service-index${serviceIndex}`}>
           <FadeInWhenVisible>
             <div className="flex flex-row items-center justify-left mb-4 lg:mb-8">
-              <div className="flex items-center w-12 h-12 sm:w-16 sm:h-16 justify-center rounded-full bg-turbo mr-3">
+              <div className="flex items-center w-12 h-12 sm:w-16 sm:h-16 justify-center rounded-full bg-yellow-400 mr-3">
                 <div className="flex-none">
-                  <IconPlan className="w-6 h-6 sm:w-7 sm:h-7" />
+                  {service.title === "Anteproyectos arquitectónicos" ? (
+                    <IconPlan className="w-6 h-6 sm:w-7 sm:h-7" />
+                  ) : (
+                    <IconHammer className="w-6 h-6 sm:w-7 sm:h-7" />
+                  )}
                 </div>
               </div>
               <h6 className="font-semibold leading-5">{service.title}</h6>

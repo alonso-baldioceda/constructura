@@ -109,7 +109,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Estudio Qbo`,
+        name: `Coesa`,
         short_name: `estudioqbo`,
         start_url: `/`,
         background_color: `#ffffff`,

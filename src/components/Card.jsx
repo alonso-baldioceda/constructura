@@ -13,15 +13,15 @@ const Card = (props) => {
     <motion.div
       transition={{ duration: 0.25, delay: 0.05 }}
       whileHover={{ scale: 1.0275 }}
-      className="bg-white h-full shadow-md overflow-hidden group"
+      className="bg-white h-full shadow-md overflow-hidden group border-4 border-deepBlue"
     >
       <Link to={`/${slug}`}>
         <div className="group-hover:opacity-75 transition duration-150 ease-out w-full">
           <GatsbyImage image={image} alt={name} className="w-full" />
         </div>
-        <div className="p-4 sm:p-5">
-          <h1 className="sm:text-lg text-gray-900 font-semibold">{name}</h1>
-          <p className="text-sm sm:text-base text-gray-700">{summary}</p>
+        <div className="p-4 sm:p-5 bg-deepBlue">
+          <h1 className="sm:text-lg text-white font-semibold">{name}</h1>
+          <p className="text-sm sm:text-base text-white">{summary}</p>
         </div>
       </Link>
     </motion.div>

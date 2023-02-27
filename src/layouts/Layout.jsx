@@ -6,10 +6,9 @@ import Chat from "../components/Chat"
 import Footer from "../components/Footer"
 
 import "fontsource-work-sans/400.css"
-import "fontsource-montserrat"
-import "fontsource-montserrat/700.css"
-import "fontsource-montserrat/800.css"
-import "fontsource-montserrat/900.css"
+import "@fontsource/merriweather-sans"
+import "@fontsource/merriweather-sans/700.css"
+import "@fontsource/merriweather-sans/800.css"
 import "fontsource-libre-baskerville"
 
 import "../styles/style.css"

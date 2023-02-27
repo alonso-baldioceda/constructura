@@ -17,7 +17,7 @@ const LatestProjects = () => {
 
   return (
     <div className="py-8 mx-auto max-w-xl lg:max-w-full lg:py-12">
-      <h1 className="font-black text-2xl mb-4 font-bold leading-none tracking-tight text-gray-900 lg:text-3xl md:mx-auto">
+      <h1 className="font-black text-2xl mb-4 font-bold leading-none tracking-tight text-deepBlue lg:text-3xl md:mx-auto">
         Últimos Proyectos
       </h1>
       {portfolio && portfolio.nodes.length > 0 ? (

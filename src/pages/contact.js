@@ -11,10 +11,7 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout>
-      <SiteMetadata
-        title="Contact"
-        description="Contacte a estudio Qbo para ..."
-      />
+      <SiteMetadata title="Contact" description="Contacte a Coesa para ..." />
       <Form card={cardsData} form={form} />
     </Layout>
   )

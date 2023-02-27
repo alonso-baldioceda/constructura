@@ -24,15 +24,16 @@ const Header = () => {
   `)
 
   return (
-    <div className="bg-gray-100 shadow">
-      <div className="container py-4 lg:py-6">
+    <div className="bg-deepBlue shadow">
+      <div className="container py-2">
         <div className="flex justify-between items-center">
           <Link
             to="/"
             className="text-xl font-black text-gray-900 flex items-center"
+            style={{ backgroundColor: "#fff", borderRadius: "8px" }}
           >
-            <Logo className="h-10 w-10 mr-4" />
-            Estudio Qbo
+            <Logo className="h-24 w-24" />
+            {/* Coesa */}
           </Link>
           <button
             className="sm:hidden"
@@ -51,7 +52,7 @@ const Header = () => {
                     key={`menu-desktop-link-${index}`}
                     index={`menu_desktop_link${index}`}
                     className={classNames(
-                      "tracking-wide font-black text-base sm:text-base uppercase block border-transparent text-gray-900 hover:text-red-700  transition duration-150 ease-out",
+                      "tracking-wide font-black text-base sm:text-base uppercase block border-transparent text-white hover:text-blue-200 transition duration-150 ease-out",
                       { "ml-6 sm:ml-8": !isFirst },
                       { "ml-0": isFirst }
                     )}

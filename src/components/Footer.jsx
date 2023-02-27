@@ -38,7 +38,7 @@ const Footer = () => {
       </ul>
       <div className="mt-8 md:mt-0 md:order-1">
         <p className="text-center text-sm md:text-base text-gray-700">
-          &copy; 2022 Estudio Qbo. Derechos reservados.
+          &copy; 2022 Coesa. Derechos reservados.
         </p>
       </div>
     </div>
@@ -52,7 +52,7 @@ const FooterLink = ({ href, label, icon: Icon }) => {
         href={href}
         target="_blank"
         rel="noreferrer noopener"
-        className="text-gray-500 hover:text-red-700 transition duration-150 ease-out"
+        className="text-gray-500 hover:text-gray-900 transition duration-150 ease-out"
       >
         <span className="sr-only">{label}</span>
         <Icon className="w-7 h-7 fill-current" />
