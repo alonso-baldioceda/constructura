@@ -16,14 +16,14 @@
     },
     "slidesData": [
       {
-        "title": "Construye ese lugar que imaginaste",
-        "description": "Planea hasta el más pequeño detalle de tu casa o negocio ideal, y hazlo realidad",
-        "alt": "Apartamento de Playa con Rancho, Piscina y Jardines Exteriores"
+        "title": "Diseñamos y construimos tu proyecto",
+        "description": "Bienvenidos a [nombre de la empresa], una empresa constructora de casas dedicada a proporcionar soluciones de vivienda de alta calidad y personalizadas para nuestros clientes. Con más de [número de años] años de experiencia en la industria de la construcción de viviendas, hemos construido una sólida reputación como líderes en el mercado gracias a nuestra dedicación a la calidad, el servicio al cliente y la innovación.",
+        "alt": "alt"
       },
       {
-        "title": "Los espacios cambian",
-        "description": "Explora con nosotros las posibilidades de rediseñar tu espacio y sacarle todo el provecho posible. Observa y analiza tu proyecto en 3D con nosotros para que juntos resolvamos hasta el más mínimo detalle antes de construirlo.",
-        "alt": "Oficina en el segundo nivel con abundante luz y ventilación natural"
+        "title": "Te acompañamos en todo el proceso",
+        "description": "En [nombre de la empresa], nuestro enfoque se centra en escuchar las necesidades y deseos de nuestros clientes y convertirlos en realidad. Ya sea que esté buscando una casa unifamiliar, un condominio o una casa de lujo, nuestro equipo de expertos en construcción trabajará estrechamente con usted en cada paso del proceso para asegurarse de que su hogar sea exactamente lo que desea.",
+        "alt": "alt"
       }
     ],
     "services": {
@@ -34,61 +34,104 @@
           "title": "Anteproyectos arquitectónicos",
           "list": [
             {
-              "title": "Modelado arquitectónico en 3 dimensiones."
+              "title": "Análisis y estudio de factibilidad del terreno o sitio de construcción."
             },
             {
-              "title": "Visualización realista de tus proyectos."
+              "title": "Diseño conceptual y desarrollo de anteproyectos arquitectónicos."
             },
             {
-              "title": "Modelos 3D constructivos para presupuesto, administración y planificación de obras."
+              "title": "Elaboración de planos y maquetas digitales en 2D y 3D."
             },
             {
-              "title": "Planos de taller para producción y manufactura."
+              "title": "Estudio de áreas y distribución espacial de los ambientes."
             },
             {
-              "title": "Diseño de mobiliario."
+              "title": "Diseño de interiores, mobiliario y acabados."
             },
             {
-              "title": "Animaciones digitales, recorre tu proyecto de forma virtual antes de construirlo."
+              "title": "Selección de materiales y técnicas constructivas."
+            },
+            {
+              "title": "Asesoramiento en la elección de sistemas de iluminación y ventilación."
+            },
+            {
+              "title": "Diseño de paisajismo y áreas verdes."
+            },
+            {
+              "title": "Asesoramiento en la elección de sistemas de climatización y ahorro energético."
+            },
+            {
+              "title": "Elaboración de documentos técnicos para la obtención de permisos y licencias."
+            },
+            {
+              "title": "Presentación de anteproyectos y defensa técnica de los mismos ante entidades competentes."
+            },
+            {
+              "title": "Coordinación con otros especialistas (estructurales, eléctricos, hidráulicos, etc.)."
+            },
+            {
+              "title": "Elaboración de presupuestos y programación de obra."
+            },
+            {
+              "title": "Dirección técnica de la construcción y supervisión de obra."
+            },
+            {
+              "title": "Asesoramiento en la elección de contratistas y subcontratistas."
             }
           ]
         },
         {
-          "title": "Planos y tramitación de proyectos",
+          "title": "Servicios de costrucción",
           "list": [
             {
-              "title": "Confección de planos constructivos."
+              "title": "Diseño y planificación de proyectos de construcción."
             },
             {
-              "title": "Presupuestos globales y detallados."
+              "title": "Construcción de edificios residenciales y comerciales."
             },
             {
-              "title": "Permisos de construcción."
+              "title": "Remodelación y renovación de propiedades existentes."
             },
             {
-              "title": "Dirección técnica de obras."
-            }
-          ]
-        },
-        {
-          "title": "Servicios de Valuación",
-          "list": [
+              "title": "Construcción de estructuras metálicas y de concreto."
+            },
             {
-              "title": "Avalúos terrenos y edificaciones."
-            }
-          ]
-        },
-        {
-          "title": "Servicios de dibujo",
-          "list": [
+              "title": "Instalación de sistemas eléctricos, de plomería y HVAC."
+            },
             {
-              "title": "Dibujo 2D de planos constructivos para tramitar y obtener permisos de construcción."
+              "title": "Construcción de carreteras, puentes y otras infraestructuras."
+            },
+            {
+              "title": "Gestión de proyectos y supervisión de la construcción."
+            },
+            {
+              "title": "Servicios de excavación y movimiento de tierras."
+            },
+            {
+              "title": "Instalación de sistemas de seguridad y protección contra incendios."
+            },
+            {
+              "title": "Construcción de piscinas y otras estructuras de recreación al aire libre."
+            },
+            {
+              "title": "Servicios de pintura, revestimiento y acabado de superficies."
+            },
+            {
+              "title": "Servicios de limpieza y mantenimiento post-construcción."
+            },
+            {
+              "title": "Trabajo de demolición y eliminación de desechos de construcción."
+            },
+            {
+              "title": "Consultoría en construcción y diseño arquitectónico."
+            },
+            {
+              "title": "Evaluación de la calidad y seguridad de las construcciones existentes."
             }
           ]
         }
       ]
     },
-
     "contact": {
       "cardsData": [
         {

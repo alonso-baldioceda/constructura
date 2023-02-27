@@ -35,15 +35,15 @@ module.exports = {
     whatsapp: "https://wa.me/50660430841",
     messenger: "http://m.me/estudioqbocr",
   },
-  flags: { PRESERVE_WEBPACK_CACHE: true },
+  // flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
-    {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
-        includeInDevelopment: false,
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-google-tagmanager",
+    //   options: {
+    //     id: process.env.GATSBY_GOOGLE_TAG_MANAGER,
+    //     includeInDevelopment: false,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-zopfli",
     },

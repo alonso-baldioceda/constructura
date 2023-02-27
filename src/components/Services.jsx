@@ -2,8 +2,8 @@ import React from "react"
 
 import FadeInWhenVisible from "./../components/FadeInWhenVisible"
 
-import IconCube from "./../images/svg/cube.svg"
-import IconCubeShadow from "./../images/svg/cubeShadow.svg"
+import IconPlan from "./../images/svg/plan.svg"
+import IconListItem from "./../images/svg/boxArrow.svg"
 
 const Services = ({ services }) => {
   return (
@@ -14,7 +14,7 @@ const Services = ({ services }) => {
             <div className="flex flex-row items-center justify-left mb-4 lg:mb-8">
               <div className="flex items-center w-12 h-12 sm:w-16 sm:h-16 justify-center rounded-full bg-turbo mr-3">
                 <div className="flex-none">
-                  <IconCube className="w-6 h-6 sm:w-7 sm:h-7" />
+                  <IconPlan className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
               </div>
               <h6 className="font-semibold leading-5">{service.title}</h6>
@@ -29,7 +29,7 @@ const Services = ({ services }) => {
                 >
                   <div className="flex">
                     <span className="mr-6 sm:mr-8">
-                      <IconCubeShadow className="w-6 h-6" />
+                      <IconListItem className="w-6 h-6" />
                     </span>
                     {item.title}
                   </div>

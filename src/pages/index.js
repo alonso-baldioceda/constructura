@@ -33,6 +33,20 @@ const IndexPage = ({ data }) => {
         <div className="container">
           <div className="mx-auto max-w-xl lg:max-w-full">
             <Slider images={heroImagesList} content={slidesData} />
+            <p className="text-base text-gray-700 mb-6 mt-12">
+              Nos enorgullece utilizar materiales de la más alta calidad y las
+              últimas técnicas de construcción para garantizar la durabilidad,
+              seguridad y eficiencia energética de cada hogar que construimos.
+              Además, nuestro compromiso con la satisfacción del cliente nos
+              lleva a ofrecer un servicio al cliente excepcional, desde el
+              primer contacto hasta la entrega de llaves.
+            </p>
+            <p className="text-base text-gray-700">
+              En [nombre de la empresa], nuestra visión es construir hogares
+              excepcionales que superen las expectativas de nuestros clientes y
+              que se conviertan en lugares de vida y recuerdos inolvidables.
+              ¡Gracias por considerarnos como su constructor de confianza!
+            </p>
           </div>
         </div>
       </div>
@@ -40,12 +54,9 @@ const IndexPage = ({ data }) => {
         <div className="py-8 mx-auto max-w-xl lg:max-w-full lg:py-12">
           <div className="flex flex-col mb-6 lg:flex-row md:mb-10">
             <div className="lg:w-1/2">
-              <h1 className="mb-6 font-black text-2xl tracking-tight text-gray-900 lg:text-3xl sm:leading-none xl:max-w-lg lg:mr-6">
-                {serviceHeadline}
+              <h1 className="font-black text-2xl tracking-tight text-gray-900 lg:text-3xl sm:leading-none">
+                Lista de servicios
               </h1>
-            </div>
-            <div className="lg:w-1/2">
-              <p className="text-base text-gray-700">{serviceDescription}</p>
             </div>
           </div>
           <Services services={list} />
