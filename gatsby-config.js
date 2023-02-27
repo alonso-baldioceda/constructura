@@ -28,12 +28,12 @@ module.exports = {
       { name: "Contáctenos", to: "contact" },
     ],
     links: {
-      facebook: "https://www.facebook.com/estudioqbocr",
-      instagram: "https://www.instagram.com/estudioqbocr/",
+      facebook: "https://www.facebook.com/coesacr",
+      instagram: "https://www.instagram.com/coesacr/",
     },
     locale: "es",
     whatsapp: "https://wa.me/50660430841",
-    messenger: "http://m.me/estudioqbocr",
+    messenger: "http://m.me/coesacr",
   },
   // flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
@@ -110,7 +110,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Coesa`,
-        short_name: `estudioqbo`,
+        short_name: `coesa`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#3182ce`,

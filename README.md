@@ -5,7 +5,7 @@
 ## Demo
 
 Live demo is available at:
-https://estudioqbo.netlify.com/
+https://coesa.netlify.com/
 
 ## Screenshot
 
@@ -37,7 +37,7 @@ To use this project you have to have a Contentful account. If you don't have one
 ### Get the source code and install dependencies.
 
 ```
-$ git clone git@github.com:wkocjan/estudioqbo.git
+$ git clone git@github.com:wkocjan/coesa.git
 $ npm install
 ```
 

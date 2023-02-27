@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
     <>
       <Header />
       {children}
-      <Chat wa="https://wa.me/50660430841" me="http://m.me/estudioqbocr" />
+      <Chat wa="https://wa.me/50660430841" me="http://m.me/coesacr" />
       <Footer />
     </>
   )

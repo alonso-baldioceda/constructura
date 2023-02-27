@@ -1,5 +1,5 @@
 {
-  "name": "estudioqbo",
+  "name": "coesa",
   "description": "GatsbyJS portfolio for Coesa",
   "version": "1.0.0",
   "author": "Alonso Baldioceda <alonso.baldioceda@gmail.com>",
@@ -74,9 +74,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alonso-baldioceda/estudioqbo.com"
+    "url": "https://github.com/alonso-baldioceda/coesa.com"
   },
   "bugs": {
-    "url": "https://github.com/alonso-baldioceda/estudioqbo.com/issues"
+    "url": "https://github.com/alonso-baldioceda/coesa.com/issues"
   }
 }

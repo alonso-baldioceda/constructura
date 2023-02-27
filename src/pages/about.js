@@ -36,10 +36,10 @@ const AboutPage = ({ data }) => (
               I'm happy to hear from you:
               <br />
               <a
-                href="mailto:info@estudioqbo.com"
+                href="mailto:info@coesa.com"
                 className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-600"
               >
-                info@estudioqbo.com
+                info@coesa.com
               </a>
             </div>
           </div>
