@@ -4,9 +4,10 @@ AWS_CLOUDFRONT_ID=$(grep GATSBY_AWS_CLOUDFRONT_ID .env.production | cut -d '=' -
 
 # Clean the cache, run build and deploy the public directory and exclude the uploads folder.
 
-aws s3 rm s3://$AWS_BUCKET_NAME/ --recursive \
+npm run clean \
+&& npm run build \
+&& aws s3 rm s3://$AWS_BUCKET_NAME/ --recursive \
 && aws s3 sync public s3://$AWS_BUCKET_NAME/ --acl public-read
-# && aws s3 sync public s3://$AWS_BUCKET_NAME/ --acl public-read \
 # && aws cloudfront create-invalidation \
 #   --distribution-id $AWS_CLOUDFRONT_ID \
 #   --paths "/*"
